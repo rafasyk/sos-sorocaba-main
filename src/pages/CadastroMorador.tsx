@@ -18,7 +18,7 @@ export default function CadastroMorador() {
       <div className="page-heading">
         <div>
           <span className="eyebrow">MORADORES</span>
-          <h1>Cadastrar morador</h1>
+          <h1>Cadastrar moradores</h1>
           <p>
             Preencha as informações conforme a ficha de identificação do
             morador.
