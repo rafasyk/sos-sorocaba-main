@@ -8,8 +8,6 @@ export default function Login() {
   return (
     <div className="login-page">
       <section className="login-brand-panel">
-        <div className="decor decor-one" />
-        <div className="decor decor-two" />
         <div className="login-logo">
           <img src={logo} alt="SOS Sorocaba" />
         </div>
