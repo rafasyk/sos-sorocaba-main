@@ -42,7 +42,7 @@ export default function Dashboard() {
         <section className="panel">
           <div className="panel-heading"><div><h2>Últimos cadastros</h2><p>Registros recentes.</p></div></div>
           <div className="mini-list">
-            {moradores.slice(0, 5).map(m => <div className="mini-row" key={m.id}><div className="avatar small">{m.nome[0]}</div><div><strong>{m.nome}</strong><span>{m.dataCadastro}</span></div><b className={m.situacao === "Abrigado" ? "tag green" : "tag orange"}>{m.situacao}</b></div>)}
+            {moradores.slice(0, 5).map(m => <div className="mini-row" key={m.id}><div className="avatar small">{m.nome[0]}</div><div><strong>{m.nome}</strong><span>{m.dataFicha}</span></div><b className={m.situacao === "Abrigado" ? "tag green" : "tag orange"}>{m.situacao}</b></div>)}
           </div>
         </section>
       </div>

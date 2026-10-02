@@ -10,7 +10,7 @@ export default function PesquisaMoradores() {
 
   const results = useMemo(() => moradores.filter(m => {
     const q = query.toLowerCase();
-    const matchesText = m.nome.toLowerCase().includes(q) || m.documento.includes(q);
+    const matchesText = m.nome.toLowerCase().includes(q) || m.numeroDocumento.includes(q);
     const matchesStatus = situacao === "Todas" || m.situacao === situacao;
     return matchesText && matchesStatus;
   }), [query, situacao]);
@@ -30,9 +30,9 @@ export default function PesquisaMoradores() {
         <div className="results-count">{results.length} resultado(s)</div>
         <div className="table-wrap">
           <table><thead><tr><th>Nome</th><th>Documento</th><th>Data do cadastro</th><th>Situação</th><th>Abrigo</th><th>Ação</th></tr></thead>
-          <tbody>{results.map(m => <tr key={m.id}><td><strong>{m.nome}</strong></td><td>{m.documento}</td><td>{m.dataCadastro}</td><td><span className={`tag ${m.situacao === "Abrigado" ? "green" : "orange"}`}>{m.situacao}</span></td><td>{m.abrigo || "—"}</td><td><button className="table-action" onClick={() => navigate(`/morador/${m.id}`)}><Eye size={17}/> Visualizar</button></td></tr>)}</tbody></table>
+          <tbody>{results.map(m => <tr key={m.id}><td><strong>{m.nome}</strong></td><td>{m.numeroDocumento}</td><td>{m.dataFicha}</td><td><span className={`tag ${m.situacao === "Abrigado" ? "green" : "orange"}`}>{m.situacao}</span></td><td>{m.abrigo || "—"}</td><td><button className="table-action" onClick={() => navigate(`/morador/${m.id}`)}><Eye size={17}/> Visualizar</button></td></tr>)}</tbody></table>
         </div>
       </section>
     </>
   );
-}
+} 
