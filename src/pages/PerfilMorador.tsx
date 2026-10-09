@@ -6,7 +6,8 @@ import {
   HeartPulse,
   MapPin,
   FileText,
-  ClipboardList
+  ClipboardList,
+  History
 } from "lucide-react";
 import { moradores } from "../data/moradores";
 
@@ -49,15 +50,26 @@ export default function PerfilMorador() {
           </p>
         </div>
 
-        <span
-          className={`tag big ${
-            morador.situacao === "Abrigado"
-              ? "green"
-              : "orange"
-          }`}
-        >
-          {morador.situacao}
-        </span>
+        <div className="heading-actions">
+          <span
+            className={`tag big ${
+              morador.situacao === "Abrigado"
+                ? "green"
+                : "orange"
+            }`}
+          >
+            {morador.situacao}
+          </span>
+
+          <button
+            type="button"
+            className="primary-btn"
+            onClick={() => navigate(`/morador/${morador.id}/historico`)}
+          >
+            <History size={18} />
+            Ver histórico
+          </button>
+        </div>
       </div>
 
       {/* IDENTIFICAÇÃO */}
