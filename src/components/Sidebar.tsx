@@ -5,9 +5,13 @@ import { BarChart3, Map, Search, UserPlus, LogOut, ChevronDown, HeartHandshake }
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   `side-link ${isActive ? "active" : ""}`;
 
-export default function Sidebar() {
+type SidebarProps = {
+  open?: boolean;
+};
+
+export default function Sidebar({ open = false }: SidebarProps) {
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar ${open ? "open" : ""}`}>
       <div className="brand">
         <div className="brand-mark">
           <img src={logo} alt="SOS Sorocaba" />
