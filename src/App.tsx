@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import CadastroMorador from "./pages/CadastroMorador";
 import PesquisaMoradores from "./pages/PesquisaMoradores";
 import PerfilMorador from "./pages/PerfilMorador";
+import HistoricoMorador from "./pages/HistoricoMorador";
 import Mapa from "./pages/Mapa";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/cadastro" element={<CadastroMorador />} />
           <Route path="/pesquisa" element={<PesquisaMoradores />} />
           <Route path="/morador/:id" element={<PerfilMorador />} />
+          <Route path="/morador/:id/historico" element={<HistoricoMorador />} />
           <Route path="/mapa" element={<Mapa />} />
         </Route>
         <Route path="*" element={<Navigate to="/login" replace />} />

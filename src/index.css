@@ -367,3 +367,37 @@ img { max-width: 100%; }
   .login-form-panel { min-height: 0; padding-top: 28px; }
   .login-form > p { margin-bottom: 24px; }
 }
+
+/* ===== Histórico do morador ===== */
+.heading-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.heading-actions .tag.big { margin-top: 0; }
+
+.tabs { display: flex; gap: 8px; margin-bottom: 20px; overflow-x: auto; padding-bottom: 2px; }
+.tab { border: 1px solid #dce1ea; background: #fff; color: #526077; border-radius: 12px; padding: 0 16px; min-height: 44px; font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
+.tab:hover { border-color: #b9c4d8; }
+.tab.active { background: #14264a; border-color: #14264a; color: #fff; }
+.tab-count { background: #e8f0ff; color: #2563eb; border-radius: 10px; padding: 2px 8px; font-size: 11px; font-weight: 800; }
+.tab.active .tab-count { background: #ffffff26; color: #fff; }
+
+.tag.red { background: #ffebf0; color: #c42a56; }
+.tag.gray { background: #f0f1f4; color: #667489; }
+
+.table-compact { min-width: 560px; }
+.table-note { margin: 0; padding: 14px 24px; border-top: 1px solid #edf0f4; color: #8b97ab; font-size: 11px; line-height: 1.6; }
+.empty-inline { padding: 30px 24px; text-align: center; color: #8b97ab; font-size: 13px; }
+.participacao { min-width: 140px; display: flex; flex-direction: column; gap: 6px; }
+.participacao span { font-weight: 700; color: #34415a; }
+
+.reincidencias { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 14px; padding: 20px 24px; }
+.reincidencia { background: #faf9fc; border: 1px solid #edf0f4; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px; }
+.reincidencia-topo { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.reincidencia-topo strong { font-size: 13px; color: #202b43; }
+.reincidencia-total { font-size: 22px; font-weight: 800; color: #17213a; letter-spacing: -0.5px; }
+.reincidencia small { color: #8b97ab; font-size: 11px; }
+
+@media (max-width: 560px) {
+  .heading-actions { align-items: flex-start; width: 100%; }
+  .heading-actions .primary-btn { width: 100%; }
+  .reincidencias { padding: 16px; grid-template-columns: 1fr; }
+  .table-note { padding: 12px 16px; }
+}
