@@ -36,3 +36,16 @@ export function formatarDuracao(dias: number): string {
   if (dias < 60) return base;
   return `${base} (≈ ${Math.round(dias / 30)} meses)`;
 }
+
+/** Data de hoje no fuso do navegador, como AAAA-MM-DD. */
+export function hojeISO(): string {
+  const agora = new Date();
+  const mes = String(agora.getMonth() + 1).padStart(2, "0");
+  const dia = String(agora.getDate()).padStart(2, "0");
+  return `${agora.getFullYear()}-${mes}-${dia}`;
+}
+
+/** A maior (mais recente) entre a data base e as outras datas. */
+export function maiorData(base: string, outras: string[]): string {
+  return outras.reduce((maior, data) => (data > maior ? data : maior), base);
+}
