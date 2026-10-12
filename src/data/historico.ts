@@ -24,6 +24,15 @@ export const tiposProvidencia: TipoProvidencia[] = [
   { id: 10, descricao: "Cozinha", categoria: "atividade" }
 ];
 
+export const tiposOcorrencia = [
+  "Mau comportamento",
+  "Briga",
+  "Descumprimento de regras",
+  "Uso de substâncias",
+  "Histórico prisional",
+  "Outro"
+];
+
 export const atendimentos: Atendimento[] = [
   // 1 - João da Silva (abrigado): 3 entradas
   { id: 1, moradorId: 1, abrigo: "Abrigo Central", entrada: "2026-01-12", saida: "2026-02-20", formaAcesso: "Busca ativa" },

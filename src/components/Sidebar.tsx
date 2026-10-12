@@ -1,6 +1,6 @@
 import logo from "../assets/sos-sorocaba-logo.png";
 import { NavLink } from "react-router-dom";
-import { BarChart3, Map, Search, UserPlus, LogOut, ChevronDown, HeartHandshake } from "lucide-react";
+import { BarChart3, ClipboardList, Map, Search, UserPlus, LogOut, ChevronDown, HeartHandshake } from "lucide-react";
 
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   `side-link ${isActive ? "active" : ""}`;
@@ -37,6 +37,9 @@ export default function Sidebar({ open = false }: SidebarProps) {
           <div className="nav-title">MORADORES <ChevronDown size={15} /></div>
           <NavLink to="/cadastro" className={linkClass}>
             <UserPlus size={18} /> Cadastrar morador
+          </NavLink>
+          <NavLink to="/registro" className={linkClass}>
+            <ClipboardList size={18} /> Registro diário
           </NavLink>
           <NavLink to="/pesquisa" className={linkClass}>
             <Search size={18} /> Pesquisar moradores

@@ -19,7 +19,8 @@ import {
   registrosProvidencia,
   tiposProvidencia
 } from "../data/historico";
-import { formatarData, formatarDuracao } from "../utils/datas";
+import { lerRegistrosSalvos } from "../data/registrosSalvos";
+import { formatarData, formatarDuracao, maiorData } from "../utils/datas";
 import {
   agruparOcorrencias,
   calcularAtendimentos,
@@ -44,29 +45,45 @@ export default function HistoricoMorador() {
   const moradorId = Number(id);
   const morador = moradores.find(m => m.id === moradorId);
 
+  // Dados de exemplo + o que foi lançado na tela "Registro diário".
+  const { todasProvidencias, todasOcorrencias, hoje } = useMemo(() => {
+    const salvos = lerRegistrosSalvos();
+    const providencias = [...registrosProvidencia, ...salvos.providencias];
+    const ocorrenciasTotal = [...ocorrencias, ...salvos.ocorrencias];
+    return {
+      todasProvidencias: providencias,
+      todasOcorrencias: ocorrenciasTotal,
+      // se algo foi lançado depois da data de exemplo, "hoje" avança junto
+      hoje: maiorData(DATA_REFERENCIA, [
+        ...salvos.providencias.map(r => r.data),
+        ...salvos.ocorrencias.map(o => o.data)
+      ])
+    };
+  }, []);
+
   const linhasAtendimento = useMemo(
     () =>
       calcularAtendimentos(
         atendimentos.filter(a => a.moradorId === moradorId),
-        DATA_REFERENCIA
+        hoje
       ),
-    [moradorId]
+    [moradorId, hoje]
   );
   const resumo = useMemo(() => resumirAtendimentos(linhasAtendimento), [linhasAtendimento]);
 
   const frequencias = useMemo(
-    () => calcularFrequencias(tiposProvidencia, registrosProvidencia, moradorId, DATA_REFERENCIA),
-    [moradorId]
+    () => calcularFrequencias(tiposProvidencia, todasProvidencias, moradorId, hoje),
+    [moradorId, todasProvidencias, hoje]
   );
   const consumo = frequencias.filter(f => f.tipo.categoria === "consumo");
   const atividades = frequencias.filter(f => f.tipo.categoria === "atividade");
 
   const ocorrenciasDoMorador = useMemo(
     () =>
-      ocorrencias
+      todasOcorrencias
         .filter(o => o.moradorId === moradorId)
         .sort((a, b) => b.data.localeCompare(a.data)),
-    [moradorId]
+    [moradorId, todasOcorrencias]
   );
   const grupos = useMemo(() => agruparOcorrencias(ocorrenciasDoMorador), [ocorrenciasDoMorador]);
   const reincidentes = grupos.filter(g => g.reincidente);
@@ -103,7 +120,7 @@ export default function HistoricoMorador() {
 
       <div className="notice">
         <AlertTriangle size={18} />
-        Dados fictícios para o protótipo. Cálculos com base em {formatarData(DATA_REFERENCIA)}.
+        Dados fictícios para o protótipo. Cálculos com base em {formatarData(hoje)}.
       </div>
 
       <div className="tabs" role="tablist" aria-label="Seções do histórico">

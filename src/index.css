@@ -401,3 +401,20 @@ img { max-width: 100%; }
   .reincidencias { padding: 16px; grid-template-columns: 1fr; }
   .table-note { padding: 12px 16px; }
 }
+
+/* ---------- Registro diário ---------- */
+.form-section-title { font-size: 15px; font-weight: 800; padding: 16px 24px; }
+.form-section-title:first-child { border-top: 0; }
+.item-lista { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; padding: 20px 24px; }
+.item-linha { display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 1px solid #dce1ea; border-radius: 10px; padding: 10px 14px; min-height: 46px; background: #fff; }
+.item-linha.marcado { border-color: #3b82f6; background: #f3f8ff; }
+.item-linha label { display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 600; color: #34415a; cursor: pointer; }
+.item-qtd { width: 70px; height: 36px; border: 1px solid #dce1ea; border-radius: 8px; padding: 0 8px; text-align: center; color: #34415a; }
+.erro-form { margin: 0 24px 16px; padding: 12px 16px 12px 32px; border-radius: 10px; background: #fff1f2; color: #b91c1c; font-size: 13px; font-weight: 600; }
+.success-message { display: inline-flex; align-items: center; gap: 6px; }
+.icon-btn { border: 0; background: transparent; color: #8b97ab; padding: 6px; border-radius: 8px; cursor: pointer; }
+.icon-btn:hover { background: #fee2e2; color: #dc2626; }
+@media (max-width: 640px) {
+  .item-lista { padding: 16px; grid-template-columns: 1fr; }
+  .erro-form { margin: 0 16px 16px; }
+}
