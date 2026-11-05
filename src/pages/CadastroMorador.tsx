@@ -7,11 +7,27 @@ import {
   HeartPulse,
   MapPin,
   FileText,
-  ClipboardList
+  ClipboardList,
+  ShieldCheck
 } from "lucide-react";
+import TermoLgpdModal from "../components/TermoLgpdModal";
+import { VERSAO_TERMO_LGPD } from "../data/termoLgpd";
 
 export default function CadastroMorador() {
   const [saved, setSaved] = useState(false);
+  const [autorizou, setAutorizou] = useState(false);
+  const [erroTermo, setErroTermo] = useState(false);
+  const [termoAberto, setTermoAberto] = useState(false);
+
+  function cadastrar() {
+    if (!autorizou) {
+      setSaved(false);
+      setErroTermo(true);
+      return;
+    }
+    setErroTermo(false);
+    setSaved(true);
+  }
 
   return (
     <>
@@ -381,6 +397,48 @@ export default function CadastroMorador() {
 
         </div>
 
+        {/* AUTORIZAÇÃO LGPD */}
+        <div className="form-section-title">
+          <ShieldCheck size={21} />
+          <div>
+            <h2>Autorização de uso dos dados</h2>
+            <p>Exigida pela Lei Geral de Proteção de Dados (LGPD).</p>
+          </div>
+        </div>
+
+        <div className="consentimento">
+          <label className={`consentimento-check ${erroTermo ? "erro" : ""}`}>
+            <input
+              type="checkbox"
+              checked={autorizou}
+              onChange={e => {
+                setAutorizou(e.target.checked);
+                if (e.target.checked) setErroTermo(false);
+                setSaved(false);
+              }}
+              aria-describedby="consentimento-ajuda"
+            />
+            <span>
+              Autorizo a SOS Sorocaba a registrar e a compartilhar os meus dados pessoais, nas
+              condições do termo de autorização.
+            </span>
+          </label>
+
+          <button type="button" className="link-btn" onClick={() => setTermoAberto(true)}>
+            Ler o termo de autorização (opcional)
+          </button>
+
+          <small id="consentimento-ajuda">
+            Termo versão {VERSAO_TERMO_LGPD}. Se a pessoa não souber ler, a equipe deve ler o termo em voz alta.
+          </small>
+
+          {erroTermo && (
+            <div className="erro-form-inline" role="alert">
+              Marque a autorização para concluir o cadastro.
+            </div>
+          )}
+        </div>
+
         <div className="form-footer">
           {saved && (
             <span className="success-message">
@@ -390,7 +448,7 @@ export default function CadastroMorador() {
 
           <button
             className="primary-btn"
-            onClick={() => setSaved(true)}
+            onClick={cadastrar}
           >
             <Save size={18} />
             Cadastrar morador
@@ -398,6 +456,8 @@ export default function CadastroMorador() {
         </div>
 
       </section>
+
+      <TermoLgpdModal aberto={termoAberto} onFechar={() => setTermoAberto(false)} />
     </>
   );
 }
