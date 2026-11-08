@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta S.O.S</title>
+    <meta name="description" content="Sistema web que substitui fichas de papel por cadastro digital no S.O.S Sorocaba. Projeto UPX-1, Unifacens.">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header class="topo">
+    <a href="#inicio" class="marca">
+        <span>Conecta S.O.S</span>
+    </a>
+    <nav class="menu" aria-label="Principal">
+        <a href="#problema">Problema</a>
+        <a href="#solucao">Solução</a>
+        <a href="#ods">ODS</a>
+        <a href="#resultados">Resultados</a>
+        <a href="#equipe">Equipe</a>
+    </nav>
+    <a class="btn btn-claro" href="https://rafasyk.github.io/dashboard" target="_blank" rel="noopener">Acessar dashboard</a>
+</header>
+
+<main id="inicio">
+
+    <section class="hero">
+        <div class="hero-texto">
+            <h1>Um único cadastro para quem atende e para quem é atendido</h1>
+            <p>O Conecta S.O.S substitui as fichas de papel do Serviço de Obras Sociais de Sorocaba por um sistema web com histórico, painel de indicadores e mapa de calor.</p>
+            <div class="acoes">
+                <a class="btn btn-primario" href="https://rafasyk.github.io/dashboard" target="_blank" rel="noopener">Ver o protótipo</a>
+                <a class="btn btn-contorno" href="#problema">Entender o projeto</a>
+            </div>
+        </div>
+        <img class="hero-img" src="src/img/painel-controle.jpg" alt="Painel de controle do Conecta S.O.S com moradores cadastrados, abrigados, em situação de rua e ocupação dos abrigos">
+    </section>
+
+    <section class="secao" id="problema">
+        <div class="cabecalho">
+            <h2>O mesmo dado é registrado três vezes</h2>
+            <p>O S.O.S atua em Sorocaba desde 1968. Na entrada de cada pessoa, a informação passa por três etapas manuais.</p>
+        </div>
+        <ol class="fluxo">
+            <li><i class="fa-solid fa-file-pen"></i><strong>Ficha de papel</strong><span>A equipe anota os dados na hora do atendimento.</span></li>
+            <li><i class="fa-solid fa-table"></i><strong>Planilha de controle</strong><span>Tudo é transcrito de novo, para depois ser enviado ao governo.</span></li>
+            <li><i class="fa-solid fa-computer"></i><strong>Sistema interno</strong><span>Uma terceira digitação, em um sistema considerado precário.</span></li>
+        </ol>
+        <p class="nota">O resultado é retrabalho, risco de erro de transcrição, perda de informação e dificuldade de consultar o histórico ou prestar contas à prefeitura.</p>
+    </section>
+
+    <section class="secao secao-clara" id="solucao">
+        <div class="cabecalho">
+            <h2>O que o Conecta S.O.S faz</h2>
+            <p>Uma plataforma de cadastro unificado, pensada para voluntários e assistentes sociais usarem durante o atendimento.</p>
+        </div>
+
+        <ul class="funcs">
+            <li>
+                <span class="ico azul"><i class="fa-solid fa-user-plus"></i></span>
+                <h3>Cadastro rápido e unificado</h3>
+                <p>Nome, documento, data de nascimento, local de origem e dados sociodemográficos em um só formulário, inclusive para cadastros em massa nas abordagens de campo.</p>
+            </li>
+            <li>
+                <span class="ico verde"><i class="fa-solid fa-magnifying-glass"></i></span>
+                <h3>Histórico de cada pessoa</h3>
+                <p>Ficha completa, atividades de que participou, entradas e saídas e a situação atual: abrigado ou em situação de rua.</p>
+            </li>
+            <li>
+                <span class="ico ambar"><i class="fa-solid fa-hands-holding-circle"></i></span>
+                <h3>Atendimentos e providências</h3>
+                <p>Registro do fluxo de entrada e saída e das ações realizadas pela ONG, com quem participou de cada atividade.</p>
+            </li>
+            <li>
+                <span class="ico azul"><i class="fa-solid fa-chart-column"></i></span>
+                <h3>Painel de controle</h3>
+                <p>Cadastrados, abrigados, pessoas em situação de rua, vagas livres e ocupação de cada abrigo, tudo em um só lugar.</p>
+            </li>
+            <li>
+                <span class="ico rosa"><i class="fa-solid fa-map-location-dot"></i></span>
+                <h3>Mapa de calor</h3>
+                <p>Mostra onde há mais relatos de pessoas em situação de rua, para planejar rotas de abordagem e distribuição de suprimentos.</p>
+            </li>
+            <li>
+                <span class="ico verde"><i class="fa-solid fa-file-lines"></i></span>
+                <h3>Relatórios automáticos</h3>
+                <p>Relatórios por providência, por pessoa ou por período, prontos para a prestação de contas aos órgãos públicos.</p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="secao" id="ods">
+        <div class="cabecalho">
+            <h2>Alinhado aos Objetivos de Desenvolvimento Sustentável</h2>
+            <p>O projeto dialoga com três metas da Agenda 2030 da ONU.</p>
+        </div>
+
+        <div class="carrossel" aria-roledescription="carrossel" aria-label="Objetivos de Desenvolvimento Sustentável">
+            <div class="slides" id="slides">
+                <article class="slide" style="--cor:#e5243b" aria-label="ODS 1">
+                    <span class="ods-num">1</span>
+                    <div>
+                        <h3>Erradicação da pobreza</h3>
+                        <p>Apoia o atendimento a pessoas em situação de vulnerabilidade social, com cadastro e acompanhamento organizados para que ninguém fique sem registro.</p>
+                    </div>
+                </article>
+                <article class="slide" style="--cor:#dd1367" aria-label="ODS 10">
+                    <span class="ods-num">10</span>
+                    <div>
+                        <h3>Redução das desigualdades</h3>
+                        <p>Dá visibilidade a quem muitas vezes é marginalizado e ajuda a direcionar o suporte a quem mais precisa, com dados em vez de achismo.</p>
+                    </div>
+                </article>
+                <article class="slide" style="--cor:#fd9d24" aria-label="ODS 11">
+                    <span class="ods-num">11</span>
+                    <div>
+                        <h3>Cidades e comunidades sustentáveis</h3>
+                        <p>Contribui para cidades mais inclusivas, com mapa e indicadores que orientam ações em pontos estratégicos de Sorocaba.</p>
+                    </div>
+                </article>
+            </div>
+            <div class="controles">
+                <button class="seta" id="ant" aria-label="ODS anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="pontos" id="pontos"></div>
+                <button class="seta" id="prox" aria-label="Próximo ODS"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="secao" id="resultados">
+        <div class="cabecalho">
+            <h2>Como o projeto foi feito</h2>
+            <p>Pesquisa aplicada, exploratória e qualitativa, com entrevista ao diretor administrativo do S.O.S, benchmark de soluções parecidas, protótipo no Figma e gestão de tarefas em Kanban no Trello. Veja as tecnologias usadas:</p>
+        </div>
+        <ul class="tecnologias">
+            <li title="React">React<img src="src/img/react-svgrepo-com.svg" alt="React"></li>
+            <li title="TypeScript">TypeScript<img src="src/img/typescript-official-svgrepo-com.svg" alt="TypeScript"></li>
+            <li title="Vite">Vite<img src="src/img/vite-svgrepo-com.svg" alt="Vite"></li>
+            <li title="MySQL">MySQL<img src="src/img/mysql-logo-svgrepo-com.svg" alt="MySQL"></li>
+            <li title="Leaflet">Leaflet<img src="src/img/leaflet-svgrepo-com.svg" alt="Leaflet"></li>
+            <li title="Trello">Trello<img src="src/img/trello-tile.svg" alt="Trello"></li>
+        </ul>
+        <p class="nota">A redução do tempo de cadastro é uma meta. Ela ainda precisa ser validada em uso real, com indicadores como tempo de triagem, número de cadastros, retrabalho e encaminhamentos.</p>
+    </section>
+
+    <section class="cta">
+        <h2>Veja o protótipo funcionando</h2>
+        <p>Os dados exibidos no dashboard são demonstrativos.</p>
+        <a class="btn btn-primario" href="#" target="_blank" rel="noopener">Acessar dashboard</a>
+    </section>
+
+    <section class="secao" id="equipe">
+        <div class="cabecalho">
+            <h2>Quem fez o Conecta S.O.S</h2>
+            <p>Seis estudantes do Centro Universitário Unifacens, em Sorocaba, na disciplina Usina de Projetos Experimentais (UPX).</p>
+        </div>
+        <!-- Edite a função e os links de cada integrante. -->
+        <ul class="equipe">
+            <li class="card">
+                <span class="avatar"><img src ="src/img/luiz-felipe.jpg" alt="Luiz Felipe"></span>
+                <h3>Luiz Felipe</h3>
+                <p>Desenvolvedor | Analista de Mercado</p>
+                <div class="redes"><a href="https://github.com/Akioml" aria-label="GitHub de Luiz"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="LinkedIn de Luiz"><i class="fa-brands fa-linkedin"></i></a></div>
+            </li>
+            <li class="card">
+                <span class="avatar"><img src = "src/img/matheus.jpeg" alt="Matheus Alves Lima"></span>
+                <h3>Matheus Alves Lima</h3>
+                <p>Analista de projeto</p>
+                <div class="redes"><a href="https://www.linkedin.com/in/matheusalvesliima/" aria-label="LinkedIn de Matheus"><i class="fa-brands fa-linkedin"></i></a></div>
+            </li>
+            <li class="card">
+                <span class="avatar"><img src = "src/img/pedro.jpg"></span>
+                <h3>Pedro Lucca</h3>
+                <p>Scrum Master</p>
+                <div class="redes"><a href="#" aria-label="GitHub de Pedro"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/in/pedro-lb-dourado" aria-label="LinkedIn de Pedro"><i class="fa-brands fa-linkedin"></i></a></div>
+            </li>
+            <li class="card">
+                <span class="avatar"><img src = "src/img/teste.webp"></span>
+                <h3>Rafaela Nunes</h3>
+                <p>Desenvolvedora | Design</p>
+                <div class="redes"><a href="#" aria-label="GitHub de Rafaela"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="LinkedIn de Rafaela"><i class="fa-brands fa-linkedin"></i></a></div>
+            </li>
+            <li class="card">
+                <span class="avatar"><img src = "src/img/teste.webp"></span>
+                <h3>Samuel Yasin</h3>
+                <p>Desenvolvedor</p>
+                <div class="redes"><a href="#" aria-label="GitHub de Samuel"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="LinkedIn de Samuel"><i class="fa-brands fa-linkedin"></i></a></div>
+            </li>
+            <li class="card">
+                <span class="avatar"><img src = "src/img/teste.webp"></span>
+                <h3>Vitória Carriel</h3>
+                <p>Designer</p>
+                <div class="redes"><a href="#" aria-label="GitHub de Vitória"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="LinkedIn de Vitória"><i class="fa-brands fa-linkedin"></i></a></div>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer class="rodape">
+    <div class="rodape-col">
+        <img src="img/logo.svg" alt="S.O.S Sorocaba" class="logo">
+        <p>Projeto UPX-1 do Centro Universitário Unifacens, desenvolvido com o Serviço de Obras Sociais de Sorocaba.</p>
+    </div>
+    <div class="rodape-col">
+        <h4>Navegação</h4>
+        <ul>
+            <li><a href="#problema">Problema</a></li>
+            <li><a href="#solucao">Solução</a></li>
+            <li><a href="#resultados">Resultados</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+        </ul>
+    </div>
+    <div class="rodape-col">
+        <h4>Links</h4>
+        <ul>
+            <li><a href="#" target="_blank" rel="noopener">Dashboard</a></li>
+            <li><a href="https://S.O.Ssorocaba.org.br/" target="_blank" rel="noopener">Site do S.O.S Sorocaba</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="src/js/funcion.js"></script>
+
+</body>
+</html>
