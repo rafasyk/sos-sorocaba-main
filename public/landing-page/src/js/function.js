@@ -1,5 +1,5 @@
 // Troque pelo e-mail que vai receber as mensagens (o FormSubmit pede uma confirmação no primeiro envio).
-var DESTINO = 'SEU-EMAIL@exemplo.com';
+var DESTINO = 'ec856b3470a94ac9980863c602f96641';
 document.getElementById('form').addEventListener('submit', function (e) {
     e.preventDefault();
     var f = e.target, s = document.getElementById('status');
