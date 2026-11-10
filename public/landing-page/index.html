@@ -3,41 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta S.O.S</title>
-    <meta name="description" content="Sistema web que substitui fichas de papel por cadastro digital no S.O.S Sorocaba. Projeto UPX-1, Unifacens.">
-    <link rel="stylesheet" href="src/css/style.css">
+    <title>Conecta S.O.S | Gestão inteligente da população em situação de rua</title>
+    <meta name="description" content="Conecta S.O.S: sistema web de cadastro e acompanhamento para o Serviço de Obras Sociais de Sorocaba.">
+    <link rel="stylesheet" href="SRC/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="shortcut icon" href="img/logo.svg" type="image/svg+xml">
 </head>
 <body>
-
 <header class="topo">
-    <a href="#inicio" class="marca">
-        <span>Conecta S.O.S</span>
-    </a>
+    <a href="index.html" class="marca"><span>Conecta S.O.S</span></a>
     <nav class="menu" aria-label="Principal">
-        <a href="#problema">Problema</a>
-        <a href="#solucao">Solução</a>
-        <a href="#ods">ODS</a>
-        <a href="#resultados">Resultados</a>
+        <a href="index.html"  aria-current="page">Inicio</a>
+        <a href="#sobre">Sobre</a>
+        <a href="contato.html">Contato</a>
         <a href="#equipe">Equipe</a>
     </nav>
-    <a class="btn btn-claro" href="https://rafasyk.github.io/sos-sorocaba-main/" target="_blank" rel="noopener">Acessar dashboard</a>
+    <a class="btn btn-claro" href="https://rafasyk.github.io/sos-sorocaba-main/" target="_blank" rel="noopener">Acessar sistema</a>
 </header>
-
-<main id="inicio">
-
+<main>
     <section class="hero">
         <div class="hero-texto">
             <h1>Um único cadastro para quem atende e para quem é atendido</h1>
             <p>O Conecta S.O.S substitui as fichas de papel do Serviço de Obras Sociais de Sorocaba por um sistema web com histórico, painel de indicadores e mapa de calor.</p>
             <div class="acoes">
-                <a class="btn btn-primario" href="https://rafasyk.github.io/sos-sorocaba-main/" target="_blank" rel="noopener">Ver o protótipo</a>
-                <a class="btn btn-contorno" href="#problema">Entender o projeto</a>
+                <a class="btn btn-primario" href="https://rafasyk.github.io/sos-sorocaba-main/" target="_blank" rel="noopener">Acessar o sistema</a>
+                <a class="btn btn-contorno" href="#solucao">Conheça o projeto</a>
             </div>
         </div>
-        <img class="hero-img" src="src/img/painel-controle.jpg" alt="Painel de controle do Conecta S.O.S com moradores cadastrados, abrigados, em situação de rua e ocupação dos abrigos">
+        <img class="hero-img" src="SRC/img/painel-controle.jpg" alt="Painel de controle do Conecta S.O.S com moradores cadastrados, abrigados, em situação de rua e ocupação dos abrigos">
     </section>
-
     <section class="secao" id="problema">
         <div class="cabecalho">
             <h2>O mesmo dado é registrado três vezes</h2>
@@ -50,7 +44,6 @@
         </ol>
         <p class="nota">O resultado é retrabalho, risco de erro de transcrição, perda de informação e dificuldade de consultar o histórico ou prestar contas à prefeitura.</p>
     </section>
-
     <section class="secao secao-clara" id="solucao">
         <div class="cabecalho">
             <h2>O que o Conecta S.O.S faz</h2>
@@ -91,78 +84,50 @@
         </ul>
     </section>
 
-    <section class="secao" id="ods">
-        <div class="cabecalho">
-            <h2>Alinhado aos Objetivos de Desenvolvimento Sustentável</h2>
-            <p>O projeto dialoga com três metas da Agenda 2030 da ONU.</p>
-        </div>
-
-        <div class="carrossel" aria-roledescription="carrossel" aria-label="Objetivos de Desenvolvimento Sustentável">
-            <div class="slides" id="slides">
-                <article class="slide" style="--cor:#e5243b" aria-label="ODS 1">
-                    <span class="ods-num">1</span>
-                    <div>
-                        <h3>Erradicação da pobreza</h3>
-                        <p>Apoia o atendimento a pessoas em situação de vulnerabilidade social, com cadastro e acompanhamento organizados para que ninguém fique sem registro.</p>
-                    </div>
-                </article>
-                <article class="slide" style="--cor:#dd1367" aria-label="ODS 10">
-                    <span class="ods-num">10</span>
-                    <div>
-                        <h3>Redução das desigualdades</h3>
-                        <p>Dá visibilidade a quem muitas vezes é marginalizado e ajuda a direcionar o suporte a quem mais precisa, com dados em vez de achismo.</p>
-                    </div>
-                </article>
-                <article class="slide" style="--cor:#fd9d24" aria-label="ODS 11">
-                    <span class="ods-num">11</span>
-                    <div>
-                        <h3>Cidades e comunidades sustentáveis</h3>
-                        <p>Contribui para cidades mais inclusivas, com mapa e indicadores que orientam ações em pontos estratégicos de Sorocaba.</p>
-                    </div>
-                </article>
+    <section class="pagina-hero" id="sobre"><h1>Sobre o Conecta S.O.S</h1><p>Tecnologia a serviço de quem acolhe.</p></section>
+    <section class="secao">
+        <div class="sobre-grid">
+            <div class="texto-sobre">
+                <h2>Por que o Conecta S.O.S existe</h2>
+                <p>O Serviço de Obras Sociais atua em Sorocaba desde 1968, com acolhimento, orientação e assistência a pessoas em situação de vulnerabilidade, em parceria com o poder público. Seu Centro de Triagem recebe e encaminha pessoas em situação de rua para a rede socioassistencial.</p>
+                <p>Hoje, os dados de cada pessoa atendida são anotados em papel, transcritos para planilhas e digitados de novo em um sistema interno. Esse trabalho repetido toma o tempo que a equipe poderia dedicar ao acolhimento.</p>
+                <p>O Conecta S.O.S centraliza esse registro em uma única plataforma, com histórico, indicadores e relatórios para a prestação de contas. Nós o construímos a partir de uma entrevista com o diretor administrativo da instituição e do estudo de soluções parecidas.</p>
             </div>
-            <div class="controles">
-                <button class="seta" id="ant" aria-label="ODS anterior"><i class="fa-solid fa-chevron-left"></i></button>
-                <div class="pontos" id="pontos"></div>
-                <button class="seta" id="prox" aria-label="Próximo ODS"><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
+            <ul class="numeros">
+                <li><strong>1968</strong><span>ano em que o S.O.S começou a atender Sorocaba</span></li>
+                <li><strong>3x</strong><span>o mesmo dado registrado hoje, entre papel, planilha e sistema</span></li>
+                <li><strong>15 a 20 min</strong><span>meta de tempo por cadastro, contra cerca de 1 hora</span></li>
+            </ul>
         </div>
+        <p class="nota">A meta de tempo ainda será validada em uso real, com indicadores como tempo de triagem, retrabalho e encaminhamentos.</p>
     </section>
-
-    <section class="secao" id="resultados">
+    <section class="secao secao-clara" id="tecnologia">
         <div class="cabecalho">
-            <h2>Como o projeto foi feito</h2>
-            <p>Pesquisa aplicada, exploratória e qualitativa, com entrevista ao diretor administrativo do S.O.S, benchmark de soluções parecidas, protótipo no Figma e gestão de tarefas em Kanban no Trello. Veja as tecnologias usadas:</p>
+            <h2>Tecnologia</h2>
+            <p>Interface em React e TypeScript, banco de dados MySQL, mapas com Leaflet e gestão do trabalho em Kanban no Trello.</p>
         </div>
         <ul class="tecnologias">
-            <li title="React">React<img src="src/img/react-svgrepo-com.svg" alt="React"></li>
-            <li title="TypeScript">TypeScript<img src="src/img/typescript-official-svgrepo-com.svg" alt="TypeScript"></li>
-            <li title="Vite">Vite<img src="src/img/vite-svgrepo-com.svg" alt="Vite"></li>
+            <li title="React">React<img src="SRC/img/react-svgrepo-com.svg" alt="React"></li>
+            <li title="TypeScript">TypeScript<img src="SRC/img/typescript-official-svgrepo-com.svg" alt="TypeScript"></li>
+            <li title="Vite">Vite<img src="SRC/img/vite-svgrepo-com.svg" alt="Vite"></li>
             <li title="MySQL">MySQL<img src="src/img/mysql-logo-svgrepo-com.svg" alt="MySQL"></li>
             <li title="Leaflet">Leaflet<img src="src/img/leaflet-svgrepo-com.svg" alt="Leaflet"></li>
             <li title="Trello">Trello<img src="src/img/trello-tile.svg" alt="Trello"></li>
         </ul>
-        <p class="nota">A redução do tempo de cadastro é uma meta. Ela ainda precisa ser validada em uso real, com indicadores como tempo de triagem, número de cadastros, retrabalho e encaminhamentos.</p>
-    </section>
-
-    <section class="cta">
-        <h2>Veja o protótipo funcionando</h2>
-        <p>Os dados exibidos no dashboard são demonstrativos.</p>
-        <a class="btn btn-primario" href="#" target="_blank" rel="noopener">Acessar dashboard</a>
     </section>
 
     <section class="secao" id="equipe">
         <div class="cabecalho">
             <h2>Quem fez o Conecta S.O.S</h2>
-            <p>Seis estudantes do Centro Universitário Unifacens, em Sorocaba, na disciplina Usina de Projetos Experimentais (UPX).</p>
+            <p>Seis estudantes do Centro Universitário FACENS, em Sorocaba.</p>
         </div>
         <!-- Edite a função e os links de cada integrante. -->
-        <ul class="equipe">
+        <ul class="equipe" id="equipe">
             <li class="card">
                 <span class="avatar"><img src ="src/img/luiz-felipe.jpg" alt="Luiz Felipe"></span>
                 <h3>Luiz Felipe</h3>
                 <p>Desenvolvedor | Analista de Mercado</p>
-                <div class="redes"><a href="https://github.com/Akioml" aria-label="GitHub de Luiz"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="LinkedIn de Luiz"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="redes"><a href="https://www.linkedin.com/in/luizfsantossilva/" aria-label="LinkedIn de Luiz"><i class="fa-brands fa-linkedin"></i></a></div>
             </li>
             <li class="card">
                 <span class="avatar"><img src = "src/img/matheus.jpeg" alt="Matheus Alves Lima"></span>
@@ -174,55 +139,47 @@
                 <span class="avatar"><img src = "src/img/pedro.jpg" alt = "Pedro Lucca"></span>
                 <h3>Pedro Lucca</h3>
                 <p>Scrum Master</p>
-                <div class="redes"><a href="#" aria-label="GitHub de Pedro"><i class="fa-brands fa-github"></i></a><a href="https://www.linkedin.com/in/pedro-lb-dourado" aria-label="LinkedIn de Pedro"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="redes"><a href="https://www.linkedin.com/in/pedro-lb-dourado" aria-label="LinkedIn de Pedro"><i class="fa-brands fa-linkedin"></i></a></div>
             </li>
             <li class="card">
                 <span class="avatar"><img src = "src/img/rafaela.jpeg" alt="Rafaela Nunes"></span>
                 <h3>Rafaela Nunes</h3>
                 <p>Desenvolvedora | Design</p>
-                <div class="redes"><a href="#" aria-label="GitHub de Rafaela"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="LinkedIn de Rafaela"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="redes"><a href="#" aria-label="LinkedIn de Rafaela"><i class="fa-brands fa-linkedin"></i></a></div>
             </li>
             <li class="card">
                 <span class="avatar"><img src = "src/img/samuel.jpeg" alt="Samuel Yasin"></span>
                 <h3>Samuel Yasin</h3>
                 <p>Desenvolvedor</p>
-                <div class="redes"><a href="#" aria-label="GitHub de Samuel"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="LinkedIn de Samuel"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="redes"><a href="#" aria-label="LinkedIn de Samuel"><i class="fa-brands fa-linkedin"></i></a></div>
             </li>
             <li class="card">
                 <span class="avatar"><img src = "src/img/vitoria.jpeg" alt="Vitória Carriel"></span>
                 <h3>Vitória Carriel</h3>
                 <p>Designer</p>
-                <div class="redes"><a href="#" aria-label="GitHub de Vitória"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="LinkedIn de Vitória"><i class="fa-brands fa-linkedin"></i></a></div>
+                <div class="redes"><a href="#" aria-label="LinkedIn de Vitória"><i class="fa-brands fa-linkedin"></i></a></div>
             </li>
         </ul>
     </section>
 
-</main>
-
+    <section class="cta">
+        <h2>Leve o Conecta S.O.S para a sua organização</h2>
+        <p>Converse com a equipe ou experimente o protótipo. Os dados exibidos são demonstrativos.</p>
+        <div class="acoes"><a class="btn btn-primario" href="https://rafasyk.github.io/sos-sorocaba-main/" target="_blank" rel="noopener">Acessar o sistema</a><a class="btn btn-contorno" href="contato.html">Fale com a gente</a></div>
+    </section>
+    
+</main> 
 <footer class="rodape">
-    <div class="rodape-col">
-        <img src="img/logo.svg" alt="S.O.S Sorocaba" class="logo">
-        <p>Projeto UPX-1 do Centro Universitário Unifacens, desenvolvido com o Serviço de Obras Sociais de Sorocaba.</p>
+    <div class="rodape-grid">
+        <div class="rodape-col">
+            <img src="img/logo.svg" alt="S.O.S Sorocaba" class="logo">
+            <p>Gestão inteligente da população em situação de rua, desenvolvida para o Serviço de Obras Sociais de Sorocaba.</p>
+        </div>
+        <div class="rodape-col"><h4>Navegação</h4><ul><li><a href="index.html">Inicio</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#equipe">Equipe</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+        <div class="rodape-col"><h4>Links</h4><ul>
+            <li><a href="https://rafasyk.github.io/sos-sorocaba-main/" target="_blank" rel="noopener">Acessar sistema</a></li>
+            <li><a href="https://github.com/rafasyk/sos-sorocaba-main" target="_blank" rel="noopener">Código no GitHub</a></li>
+            <li><a href="https://sossorocaba.org.br/" target="_blank" rel="noopener">S.O.S Sorocaba</a></li></ul></div>
     </div>
-    <div class="rodape-col">
-        <h4>Navegação</h4>
-        <ul>
-            <li><a href="#problema">Problema</a></li>
-            <li><a href="#solucao">Solução</a></li>
-            <li><a href="#resultados">Resultados</a></li>
-            <li><a href="#equipe">Equipe</a></li>
-        </ul>
-    </div>
-    <div class="rodape-col">
-        <h4>Links</h4>
-        <ul>
-            <li><a href="#" target="_blank" rel="noopener">Dashboard</a></li>
-            <li><a href="https://S.O.Ssorocaba.org.br/" target="_blank" rel="noopener">Site do S.O.S Sorocaba</a></li>
-        </ul>
-    </div>
+    <p class="copy">© 2026 Conecta S.O.S. Desenvolvido por estudantes do Centro Universitário FACENS.</p>
 </footer>
-
-<script src="src/js/funcion.js"></script>
-
-</body>
-</html>
